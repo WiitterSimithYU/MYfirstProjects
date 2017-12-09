@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9thHtml</title>
+</head>
+<body>
+<p>计数开始！</p>
+<button id="demo" type="button" onclick="myFunctions()">计数</button>
+
+<script>
+    var vim = 0;
+    function add() {
+       return vim +=1 ;
+    }
+
+    function myFunctions() {
+        document.getElementById("demo").innerHTML = add();
+    }
+</script>
+
+</body>
+</html>

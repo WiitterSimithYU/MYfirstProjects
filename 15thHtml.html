@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>W3Cschool教程(w3cschool.cn)</title>
+</head>
+<head>
+    <script>
+        function setCookie(cname,cvalue,exdays){
+            var d = new Date();
+            alert(d);
+            d.setTime(d.getTime()+(exdays*24*60*60*1000));
+            var expires = "expires="+d.toGMTString();
+            alert(cname+"="+cvalue+"; "+expires);//username=ee; expires=Sun, 15 Oct 2017 05:50:22 GMT
+            document.cookie = cname+"="+cvalue+"; "+expires;
+        }
+        function getCookie(cname){
+            alert(document.cookie+"  00");
+            var name = cname + "=";
+            var ca = document.cookie.split(';');//username=rr;
+
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i].trim();
+                alert(c.indexOf(name));
+                if (c.indexOf(name)==0) return c.substring(name.length,c.length);//这里是获取名称
+            }
+            return "";
+        }
+        function checkCookie(){
+           // document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            var user=getCookie("username");
+            if (user!=""){
+                alert("Welcome again " + user);
+            }
+            else {
+                user = prompt("Please enter your name:","");
+                if (user!="" && user!=null){
+                    setCookie("username",user,30);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="checkCookie()"></body>
+
+</html>

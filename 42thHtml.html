@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var array = ['a','b','c','d'];
+//    var removeArray = array.splice(0,2);
+//    alert(array);//弹出c,d
+//    alert(removeArray);//返回值为删除项，即弹出a,b
+
+    var array = ['a','b','c','d'];
+    var removeArray = array.splice(1,0,'insert');
+    alert(array);//弹出a,insert,b,c,d
+    alert(removeArray);//弹出空
+
+//    var array = ['a','b','c','d'];
+//    var removeArray = array.splice(1,1,'insert');
+//    alert(array);//弹出a,insert,c,d
+//    alert(removeArray);//弹出b
+</script>
+</body>
+

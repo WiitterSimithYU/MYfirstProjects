@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>40thHtml</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app = "" ng-init="mySwitch=true">
+
+    <p>
+        <button ng-disabled="mySwitch">点我！</button>
+    </p>
+<input type="checkbox" ng-model="mySwitch">按钮
+    <P>
+        {{mySwitch}}
+    </P>
+</div>
+</body>
+</html>

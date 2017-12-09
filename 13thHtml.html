@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13thHtml</title>
+</head>
+<body>
+<!--事件监听-->
+<p>该实例使用 addEventListener() 方法在按钮中添加点击事件。 </p>
+<button id="mybutom" >点击</button>
+<p id="demo" ></p>
+<script>
+    document.getElementById("mybutom").addEventListener("click",disPlayDate);
+
+    function disPlayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+</script>
+
+</body>
+</html>

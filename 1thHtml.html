@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>firstProject</title>
+    <!--<style>-->
+    <!--.dianji {-->
+
+    <!--position: relative;-->
+    <!--/*float: left;*/-->
+    <!--left: 50px;-->
+
+    <!--}-->
+    <!--.change{-->
+
+    <!--position: relative;-->
+    <!--left: 100px;-->
+    <!--}-->
+    <!--</style>-->
+</head>
+
+<h1>我的第一个JavaScript</h1>
+
+<!--<script>-->
+<!--function change() {-->
+<!--x = document.getElementById("shijian").innerHTML = "yuxiaohui";-->
+<!--}-->
+<!--</script>-->
+<!--<p id="shijian">javaScript 能够对事件作出反应。比如对按钮的点击</p>-->
+<!--<button class="dianji" type="button" onclick="alert('欢迎!')">点我!</button>-->
+<!--<button class="change" type="button" onclick="change()">更改</button>-->
+
+<input id="demo" type="text">
+<script>
+    function myFunction(){
+        var x = document.getElementById("demo").valueOf();
+        if (x=""||isNaN(x)){
+
+            alert("不是数字");
+        }
+    }
+
+</script>
+
+<button type="button" onclick="myFunction()">验证数字</button>
+
+</body>
+</html>

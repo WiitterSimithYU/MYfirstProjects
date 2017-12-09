@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8thHtml</title>
+</head>
+<body>
+<p>该实例中，myfunction是函数构造函数:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    function myfunction(arg1, arg2) {
+        this.firstname = arg1;
+        this.lastname  = arg2;
+    }
+
+    function myfunction1(a, b) {
+        return a*b;
+    }
+
+    var x = new myfunction("john","doe")
+    var myary = [10,11];
+    document.getElementById("demo").innerHTML = x.firstname;
+    document.getElementById("demo1").innerHTML = x.lastname;
+    document.getElementById("demo2").innerHTML = myfunction1.call(myfunction1(),10,2);
+    document.getElementById("demo3").innerHTML = myfunction1.apply(myfunction1(),myary);
+</script>
+
+</body>
+</html>

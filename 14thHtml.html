@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14thHtml</title>
+</head>
+<body>
+<script>
+//    var person = new Object();
+//    person.firstname = "Jon";
+//    person.lastname  = "Doe";
+//    person.age       =50;
+//    person.eyeColor  = "blue";
+
+
+//    person = {firstname:"Jon",lastname:"doe",age:"50",eyeColor:"blue"};
+
+function person(firstname,lastname,age,eyecolor) {
+    this.firstname = firstname;
+    this.lastname  = lastname;
+    this.age       = age;
+    this.eyeColor  = eyecolor;
+    this.changename= changename;
+    function changename(name) {
+        this.lastname = name;
+    }
+}
+
+//    myFather = person("jon","doe",50,"blue");
+    myMother =new person("sally","relly",48,"green");
+    myMother.changename("yee");
+    document.write(myMother.firstname);
+//    document.write(myMother.lastname);
+</script>
+</body>
+</html>

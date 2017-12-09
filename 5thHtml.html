@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5thHtml</title>
+
+</head>
+<body>
+
+<p>本例调用的函数会执行一个计算，然后返回结果:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+
+//    模式1
+    function myFunction(a, b) {
+        return a*b;
+    }
+//    模式2
+   var x = function myFunction1(a,b) {return a*b};
+//    模式3
+   var myFunc = new Function("a","b","return a*b");
+//   模式4
+   var myfunc1 = function (a,b) {return a*b};
+//   模式5 自调用函数
+   (function () {
+    document.getElementById("demo4").innerHTML="自调用函数";
+   })();
+//   模式5
+   var myfunc2 = function (a,b) {
+    return arguments.length;
+   }
+//   模式5
+var myfunc3 = function (a,b) {
+    return a*b;
+}
+//    ocument.getElementById("demo").innerHTML=math(4,5);
+//    你这句有问题，浏览器还没载入完就执行，当然不一定会找到demo元素，吧这句放函数中，整个页面载入完毕在执行。
+    document.getElementById("demo").innerHTML=myFunction(4,3);
+    document.getElementById("demo1").innerHTML=x(2,8);
+    document.getElementById("demo2").innerHTML=myFunc(3,5);
+    document.getElementById("demo3").innerHTML=myfunc1(4,5);
+    document.getElementById("demo4").innerHTML=myfunc2(6,7);
+    document.getElementById("demo5").innerHTML=myfunc3(7,7).toString();
+</script>
+</body>
+</html>

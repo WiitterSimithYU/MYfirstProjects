@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12thHtml</title>
+    <script>
+        function myfocus(x) {
+
+            x.style.backgroundColor = "#666";
+        }
+        function myblur(x) {
+            x.style.backgroundColor = "#fff"
+        }
+    </script>
+</head>
+<body>
+<!--失去焦点，获取焦点-->
+<h1 onmouseover="style.color='red'" onmouseout="style.color='#333'">将鼠标移至文部上方</h1>
+<div>输入你的名字</div><input type="text" onfocus="myfocus(this)" onblur="myblur(this)">
+</body>
+</html>
